@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Yıl • Binlerce Renk, Sıfır Görsel, Tam Kalpten</title>
+    <!-- Zarif, Kalın ve Daktilo Yazı Tipleri -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="climate-default">
+
+    <!-- Arka Plan Uçuşan Semboller Katmanı -->
+    <div id="floating-symbols-layer"></div>
+
+    <!-- İki Katmanlı Renkli Geçiş Perdesi -->
+    <div id="curtain-layer-1" class="transition-curtain"></div>
+    <div id="curtain-layer-2" class="transition-curtain"></div>
+
+    <!-- Eşik ve Özel Kutlama Modalı (100, 250, 450, 600 ve Final) -->
+    <div id="celebration-modal" class="modal hidden">
+        <div class="modal-card">
+            <div id="modal-emoji" class="modal-big-emoji">🎉</div>
+            <h2 id="modal-title">Tebrikler!</h2>
+            <p id="modal-message"></p>
+            <button onclick="closeModal()" class="btn-primary">Harika, Devam Edelim ❤️</button>
+        </div>
+    </div>
+
+    <!-- 1. SAHNE: KARŞILAMA VE KİLİT EKRANI -->
+    <section id="welcome-screen" class="screen active">
+        <div class="wave-bg"></div>
+        <div class="welcome-content">
+            <span class="badge-pill">♥ 3. YIL DÖNÜMÜMÜZ ♥</span>
+            <h1 class="breathing-title">Üçüncü Yıl • Binlerce Renk, Sıfır Görsel, Tam Kalpten.</h1>
+            <p class="welcome-subtitle">
+                Burada hiçbir fotoğraf yok; her şeyi kelimeler, renk geçişleri ve senin için saklanmış yüzlerce küçük kapı anlatıyor.
+            </p>
+            <button id="enter-universe-btn" class="btn-magic-gradient">
+                Kapıyı Aç ve İçeri Gir ✦
+            </button>
+        </div>
+    </section>
+
+    <!-- 2. SAHNE: ANA EVREN VE DİNAMİK SAYFA MOTORU -->
+    <div id="main-universe" class="hidden">
+        <!-- Üst Bilgi Şeridi -->
+        <header class="top-bar">
+            <div class="top-left">
+                <span class="brand-title" onclick="navigateTo('home')">3. Yıl Özel Kutlama Alanı</span>
+            </div>
+            <div class="top-center">
+                <span id="active-climate-name" class="climate-badge">Evren Merkezi</span>
+            </div>
+            <div class="top-right">
+                <div class="counter-box">
+                    Keşfedilen: <strong id="discovery-count">0</strong> / 600
+                </div>
+                <button id="burst-hearts-btn" class="btn-burst" title="Kalp Patlat">Kalp Patlat ♥</button>
+                <button id="reduce-motion-btn" class="btn-icon" title="Animasyonları Azalt">✨</button>
+            </div>
+        </header>
+
+        <!-- Dinamik Sayfa İçerik Alanı (Her tıklamada burası yeni bir bağımsız sayfa olarak yüklenir) -->
+        <main id="page-viewport" class="page-container"></main>
+    </div>
+
+    <!-- Script Dosyaları (Sıralama Önemlidir!) -->
+    <script src="quiz-data.js"></script>
+    <script src="content-600.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
